@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/food-order-form/static/css/main.a38b5516.chunk.css",
+    "main.js": "/food-order-form/static/js/main.e88687e4.chunk.js",
+    "main.js.map": "/food-order-form/static/js/main.e88687e4.chunk.js.map",
+    "runtime-main.js": "/food-order-form/static/js/runtime-main.28e471bb.js",
+    "runtime-main.js.map": "/food-order-form/static/js/runtime-main.28e471bb.js.map",
+    "static/js/2.85afdf59.chunk.js": "/food-order-form/static/js/2.85afdf59.chunk.js",
+    "static/js/2.85afdf59.chunk.js.map": "/food-order-form/static/js/2.85afdf59.chunk.js.map",
+    "index.html": "/food-order-form/index.html",
+    "static/css/main.a38b5516.chunk.css.map": "/food-order-form/static/css/main.a38b5516.chunk.css.map",
+    "static/js/2.85afdf59.chunk.js.LICENSE.txt": "/food-order-form/static/js/2.85afdf59.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28e471bb.js",
+    "static/js/2.85afdf59.chunk.js",
+    "static/css/main.a38b5516.chunk.css",
+    "static/js/main.e88687e4.chunk.js"
+  ]
+}
