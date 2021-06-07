@@ -5,8 +5,6 @@ import showMoreOptions from "./showMoreOptions";
 import validation from "./validation";
 import axios from "axios";
 
-//https://jsonplaceholder.typicode.com/posts
-
 const Form = () => {
   const [form, setForm] = useState({
     dish_name: "",
@@ -104,6 +102,24 @@ const Form = () => {
       .catch(error => console.log(error));
   };
 
+  const resetForm = () => {
+    setError(null);
+    setSent(true);
+    hideSuccessForm();
+    setTimeout(() => {
+      setForm({
+        dish_name: "",
+        preparation_time: "--:--:--",
+        type: "",
+        id: `order-${Date.now().toString(32)}`,
+        no_of_slices: "",
+        diameter: "",
+        spiciness_scale: "",
+        slices_of_bread: ""
+      });
+    }, 5000);
+  };
+
   const handleSubmit = async e => {
     e.preventDefault();
     const errorMsg = validation(form);
@@ -113,9 +129,7 @@ const Form = () => {
     }
     setForm({ ...form, id: setID() });
     sendToServer(cutEmpty());
-    setError(null);
-    setSent(true);
-    hideSuccessForm();
+    resetForm();
   };
 
   return (
@@ -151,7 +165,7 @@ const Form = () => {
         </label>
         <label>
           Dish type:
-          <select name="type" onChange={updateField}>
+          <select value={form.type} name="type" onChange={updateField}>
             <option value="">--Choose the dish--</option>
             <option value="pizza">Pizza</option>
             <option value="soup">Soup</option>
